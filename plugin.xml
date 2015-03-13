@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="org.tbyrne.cordova.plugins.screenppi"
+    version="1.3.0">
+
+    <name>Screen PPI</name>
+    <description>dds Screen PPI access to the global screen object in android and iOS.</description>
+    <license>MIT</license>
+
+    <engines>
+        <engine name="cordova" version=">=3.0.0" />
+    </engines>
+
+    <js-module src="www/screenppi.js" name="screenppi">
+        <clobbers target="cordova.plugins.screenppi" />
+    </js-module>
+
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="ScreenPPI">
+                <param name="ios-package" value="ScreenPPI" />
+            </feature>
+        </config-file>
+        <js-module src="www/screenppi.ios.js" name="screenppi.ios">
+            <merges target="cordova.plugins.screenppi" />
+        </js-module>
+        <header-file src="src/ios/ScreenPPI.h" />
+        <source-file src="src/ios/ScreenPPI.m" />
+    </platform>
+
+    <platform name="android">
+        <source-file src="src/android/org/tbyrne/cordova/plugins/screenppi/ScreenPPI.java" target-dir="src/org/tbyrne/cordova/plugins/screenppi/" />
+
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="ScreenPPI">
+                <param name="android-package" value="org.tbyrne.cordova.plugins.screenppi.ScreenPPI" />
+            </feature>
+        </config-file>
+        <js-module src="www/screenppi.android.js" name="screenppi.android">
+            <merges target="cordova.plugins.screenppi" />
+        </js-module>
+    </platform>
+
+    <!--<platform name="blackberry10">-->
+        <!--<dependency id="com.blackberry.app" />-->
+        <!--<config-file target="www/config.xml" parent="/widget">-->
+            <!--<feature name="org.tbyrne.cordova.plugins.screenppi" value="org.tbyrne.cordova.plugins.screenppi" />-->
+        <!--</config-file>-->
+        <!--<js-module src="www/screenppi.bb10.js" name="screenppi.bb10">-->
+            <!--<merges target="cordova.plugins.screenppi" />-->
+        <!--</js-module>-->
+    <!--</platform>-->
+
+</plugin>

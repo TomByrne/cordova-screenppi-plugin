@@ -1,6 +1,7 @@
+/*
 The MIT License (MIT)
 
-Copyright (c) 2014 
+Copyright (c) 2014
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -19,3 +20,36 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+ */
+//var screenPPI = {};
+//
+//screenPPI.getPPI = function() {
+//    //platform specific files override this function
+//    console.log('screenPPI not supported on device');
+//};
+//
+//function setScreenPPI(obj) {
+//    if (obj.unlockOrientation || obj.lockOrientation) {
+//        return;
+//    }
+//
+//    obj.lockOrientation = function(orientation) {
+//        if (Orientations.indexOf(orientation) == -1) {
+//            console.log('INVALID ORIENTATION', orientation);
+//            return;
+//        }
+//        screenOrientation.currOrientation = orientation;
+//        screenOrientation.setOrientation(orientation);
+//    };
+//
+//    obj.unlockOrientation = function() {
+//        screenOrientation.currOrientation = 'unlocked';
+//        screenOrientation.setOrientation('unlocked');
+//    };
+//}
+//
+//setScreenPPI(screen);
+//
+//window.addEventListener("orientationchange", orientationChange, true);
+//
+//module.exports = screenPPI;

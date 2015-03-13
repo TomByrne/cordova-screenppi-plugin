@@ -1,0 +1,18 @@
+{
+    "version": "1.3.2",
+    "name": "org.tbyrne.cordova.plugins.screenppi",
+    "cordova_name": "Screen PPI",
+    "description": "Adds Screen PPI access to the global screen object in android and iOS.",
+    "license": "MIT",
+    "platforms": [
+        "ios",
+        "android"//,
+        //"blackberry10"
+    ],
+    "engines": [
+        {
+            "name": "cordova",
+            "version": ">=3.0.0"
+        }
+    ]
+}
